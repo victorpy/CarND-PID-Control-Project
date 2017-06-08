@@ -68,9 +68,6 @@ int main()
 			pid.isFirstTime = false;
 		  }
 		
-		  //twiddle
-		  //if()
-		
           pid.UpdateError(cte);
           steer_value = pid.TotalError();
           
