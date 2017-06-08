@@ -1,0 +1,18 @@
+1)
+Student describes the effect of the P, I, D component of the PID algorithm in their implementation. Is it what you expected?
+
+I started implementing the proportional P part, that is the base of the PID controller. The car start oscilating almost immediatly after moving. The bigger the P parameter, the more it oscilates.
+The i added the Differential part D, to see how this part helps the P part to avoid oscillation. The oscillation was reduced at the begining, but then the car starte oscillating again.
+Last i added the integral part I, at start the car was moving smother but after some time it stated oscillating again.
+
+At first it was not what i expected. So i have to find a way to improve the driving with PID.
+
+2) Describe how the final hyperparameters were chosen.
+
+I started with some parameters extracted from the lesson in PID section. With those parameters and a throttle of 0.3, the car was oscillating too much.
+After that i implemented a manual hyperparametes tuning, using some logic from twiddle. At start a only changed the P parameter, and see how the car oscillates.
+Try the P with high values and low values, after i got the less oscillating driving. 
+After the P parameter was set, i started playing with the D value, started with a high value, and then decreased the value until the car drive smothly and almost without oscillation.
+At last, i started playing with the I value. First i put a high value, and the car started oscillating again, so i lower the value until i get a smooth driving.
+
+Also, i have to reduce the throttle from 0.3 to 0.2 to make my selected hyperparameters drive even smoother. Maybe, implementing the hyperparameter selection with twiddle could make my car drive smooth with higher velocity.

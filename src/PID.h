@@ -16,7 +16,16 @@ public:
   double Kp;
   double Ki;
   double Kd;
+  
+  double prev_cte;
+  
+  bool isFirstTime;
+  
+  double cte_sum;
 
+  int count;
+  
+  //vector<double> cte_log;
   /*
   * Constructor
   */
